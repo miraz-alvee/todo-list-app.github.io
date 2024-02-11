@@ -42,10 +42,10 @@ const Home = () => {
     const filteredTasks =
         filter === 'all' ? tasks : tasks.filter(task => task.priority === filter);
 
-    const completedTasks = tasks.filter(task => task.completed).length;
+    const completedTasks = tasks.filter(task => task.completed);
 
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="bg-pink-300 min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-md w-full max-w-5xl">
                 <h1 className="text-5xl font-bold mb-6 text-center text-blue-600">
                     Todo List
@@ -81,7 +81,7 @@ const Home = () => {
                         Total Tasks: <span className="font-bold text-blue-600">{tasks.length}</span></p>
                     <p className="text-xl font-bold">
                         Completed Tasks:{' '}
-                        <span className="font-bold text-green-600">{completedTasks}</span></p>
+                        <span className="font-bold text-green-600">{completedTasks.length}</span></p>
                 </div>
 
             </div>

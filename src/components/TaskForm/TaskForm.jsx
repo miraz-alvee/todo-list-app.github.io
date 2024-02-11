@@ -9,7 +9,8 @@ const TaskForm = ({ onSubmit }) => {
         if (!text.trim()) return;
         onSubmit({ text, priority });
         setText('');
-        setPriority('low'); // Reset priority after submitting
+        setPriority('low'); 
+        reset('');// Reset priority after submitting
     };
 
     return (
@@ -33,7 +34,8 @@ const TaskForm = ({ onSubmit }) => {
                 </select>
                 <button
                     type="submit"
-                    className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-full mt-5"
+                    className="bg-blue-500 text-white p-2 rounded
+                     hover:bg-blue-600 w-full mt-5"
                 >
                     Add
                 </button>

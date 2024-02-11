@@ -12,7 +12,6 @@ const TaskList = ({ tasks, onToggle, onDelete }) => {
                     onToggle={onToggle}
                     onDelete={onDelete}>
                 </Task>
-
             ))}
         </div>
     );
